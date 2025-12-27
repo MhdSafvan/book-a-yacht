@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+html body {
+  font-family: "Mona Sans", sans-serif;
+  /* Mobile default */
+  /* Desktop */
+  /* Base blur (very subtle at top) */
+}
+html body .container {
+  max-width: 1600px;
+}
+html body a {
+  text-decoration: none !important;
+}
+html body .btn {
+  background-color: #ffffff;
+  padding: 20px 50px;
+  color: #000000;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all ease 0.5s;
+}
+html body .btn:hover {
+  background-color: #7fbbc5;
+  color: #ffffff;
+}
+html body .bg-color {
+  background-color: #F3F5F9;
+}
+html body .primary-menu {
+  display: none;
+  flex-direction: column;
+}
+html body .primary-menu.is-open {
+  display: flex;
+}
+@media (min-width: 1024px) {
+  html body .nav-toggle {
+    display: none;
+  }
+  html body .primary-menu {
+    display: flex;
+    flex-direction: row;
+  }
+}
+html body .gradient-blur {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 65%;
+  z-index: 5;
+  pointer-events: none;
+}
+html body .gradient-blur > div,
+html body .gradient-blur::before {
+  position: absolute;
+  inset: 0;
+}
+html body .gradient-blur::before {
+  content: "";
+  z-index: 1;
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  -webkit-mask: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 50%);
+          mask: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 50%);
+}
+html body .gradient-blur > div {
+  z-index: 2;
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 12.5%, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%);
+          mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 12.5%, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%);
+}
+html body .dropdown {
+  position: relative;
+}
+html body .dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+html body .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  padding: 0;
+  display: block;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+  border-radius: 15px;
+  overflow: hidden;
+  border: none;
+}
+html body .dropdown-menu li a {
+  color: #000000 !important;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  transition: all ease 0.5s;
+}
+html body .dropdown-menu li a:hover {
+  background-color: #7fbbc5;
+  color: #ffffff !important;
+}
+html body .dropdown-menu li:nth-last-child(1) a {
+  border-bottom: none;
+}
+html body .dropdown.is-open > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+html body header {
+  padding: 0 0 30px;
+  position: fixed !important;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+html body header .top-header {
+  margin-bottom: 30px;
+}
+html body header .top-header .container {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+html body header .top-header .container p {
+  margin: 0;
+}
+html body header .top-header .container .top-header-container {
+  display: flex;
+  justify-content: space-between;
+}
+html body header .top-header .container .top-header-container img {
+  margin-right: 10px;
+  width: 18px;
+  top: -3px;
+  position: relative;
+}
+html body header .top-header .container .top-header-container p {
+  color: #ffffff;
+  font-size: 16px;
+}
+html body header .top-header .container .top-header-container .email-phone {
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+}
+html body header .top-header .container .top-header-container .email-phone ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+html body header .top-header .container .top-header-container .email-phone ul li {
+  float: left;
+  margin-left: 50px;
+}
+html body header .top-header .container .top-header-container .email-phone ul li a {
+  color: #ffffff;
+  font-size: 16px;
+}
+html body header .navbar-grid {
+  padding: 0;
+}
+html body header .navbar-grid .logo img {
+  width: 100%;
+  max-height: 80px;
+  filter: brightness(10);
+}
+html body header .navbar-grid nav .primary-menu li a {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #ffffff;
+}
+html body header .navbar-grid nav .primary-menu li.dropdown a img {
+  margin-left: 5px;
+}
+html body section {
+  padding: 80px 0;
+}
+html body section.inner-banner {
+  min-height: 55vh;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  align-items: end;
+}
+html body section.inner-banner h1 {
+  font-family: "Bungee", sans-serif;
+  width: 33%;
+  text-align: center;
+  margin: 0 auto;
+  color: #ffffff;
+  z-index: 5;
+  position: relative;
+}
+html body section .meta-title {
+  font-size: 20px;
+  margin-bottom: 30px;
+  display: block;
+}
+html body section .section-title {
+  font-family: "Bungee", sans-serif;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+html body section .section-title strong {
+  color: #7fbbc5;
+  font-weight: 500;
+}
+html body section p {
+  color: #243A47;
+  font-size: 25px;
+  line-height: 40px;
+}/*# sourceMappingURL=styles.css.map */
