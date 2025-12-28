@@ -26,7 +26,7 @@ html body .btn:hover {
   color: #ffffff;
 }
 html body .bg-color {
-  background-color: #F3F5F9;
+  background-color: #f3f5f9;
 }
 html body .primary-menu {
   display: none;
@@ -45,11 +45,12 @@ html body .primary-menu.is-open {
   }
 }
 html body .gradient-blur {
-  position: fixed;
+  position: absolute;
   inset: 0 0 auto 0;
-  height: 65%;
+  height: 100%;
   z-index: 5;
   pointer-events: none;
+  top: 0;
 }
 html body .gradient-blur > div,
 html body .gradient-blur::before {
@@ -123,6 +124,7 @@ html body header {
   width: 100%;
   left: 0;
   top: 0;
+  transition: all ease 0.5s;
 }
 html body header .top-header {
   margin-bottom: 30px;
@@ -143,6 +145,7 @@ html body header .top-header .container .top-header-container img {
   width: 18px;
   top: -3px;
   position: relative;
+  filter: brightness(10);
 }
 html body header .top-header .container .top-header-container p {
   color: #ffffff;
@@ -183,6 +186,30 @@ html body header .navbar-grid nav .primary-menu li a {
 html body header .navbar-grid nav .primary-menu li.dropdown a img {
   margin-left: 5px;
 }
+html body header.sticky-header .top-header .container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+html body header.sticky-header .top-header .container .top-header-container p,
+html body header.sticky-header .top-header .container .top-header-container .email-phone ul li a {
+  color: #243a47 !important;
+}
+html body header.sticky-header .top-header .container .top-header-container img {
+  filter: brightness() !important;
+}
+html body header.sticky-header .navbar-grid .logo img {
+  filter: brightness();
+}
+html body header.sticky-header .navbar-grid nav .primary-menu li a {
+  color: #243a47;
+}
+html body header.sticky-header .navbar-grid nav .primary-menu li a img {
+  filter: invert(1);
+  opacity: 0.5;
+}
+html body header.sticky-header .btn {
+  background-color: #4b8087;
+  color: #ffffff;
+}
 html body section {
   padding: 80px 0;
 }
@@ -192,6 +219,7 @@ html body section.inner-banner {
   background-position: center top;
   display: flex;
   align-items: end;
+  position: relative;
 }
 html body section.inner-banner h1 {
   font-family: "Bungee", sans-serif;
@@ -217,7 +245,69 @@ html body section .section-title strong {
   font-weight: 500;
 }
 html body section p {
-  color: #243A47;
+  color: #243a47;
   font-size: 25px;
   line-height: 40px;
+}
+html body section .yacht-list-wrapper {
+  margin-top: 100px;
+}
+html body section .yacht-list-wrapper .yacht-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+html body section .yacht-list-wrapper .yacht-card .yacht-image {
+  height: 225px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+html body section .yacht-list-wrapper .yacht-card .yacht-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+html body section .yacht-list-wrapper .yacht-card .yacht-image .location {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+html body section .yacht-list-wrapper .yacht-card .yacht-image .location img {
+  width: 15px;
+  margin-right: 10px;
+  filter: brightness(10);
+  position: relative;
+  top: 3px;
+}
+html body section .yacht-list-wrapper .yacht-card .yacht-image .location span {
+  color: #ffffff;
+  font-size: 16px;
+}
+html body section .yacht-list-wrapper .yacht-card .yacht-image:before {
+  content: "";
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  -webkit-mask: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 50%);
+  mask: linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 50%);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  height: 100%;
+}
+html body section .yacht-list-wrapper .yacht-card .yacht-details .yacht-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212529;
+  margin: 20px 0;
 }/*# sourceMappingURL=styles.css.map */
