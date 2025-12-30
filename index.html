@@ -169,7 +169,8 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 yacht-list-wrapper">
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-                                <a href="#" class="yacht-card">
+
+                                <div class="yacht-card js-panel-trigger" data-panel-target="#details-panel" data-title="Luxury Yacht" data-description="Premium yacht with crew and amenities.">
                                     <div class="yacht-image">
                                         <img src="images/147-ft-royal-rave.webp" class="img-fluid" alt="Luxury Yacht Rental in Dubai" title="Luxury Yacht Rental in Dubai" loading="lazy" />
                                         <div class="location">
@@ -180,26 +181,34 @@
                                     <div class="yacht-details">
                                         <h3 class="yacht-name">147 Ft Royal Rave</h3>
                                         <div class="row specifications">
-                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 specific-item">
                                                 <img src="images/people.svg" class="img-fluid" alt="Capacity icon" title="Yacht Capacity" loading="lazy" />
                                                 <span>50 Guests</span>
                                             </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 specific-item">
                                                 <img src="images/crew.svg" class="img-fluid" alt="Crew icon" title="Yacht Crew" loading="lazy" />
-                                                <span>1 Captain, 5 Crew</span>
+                                                <span>5 Crews</span>
                                             </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 specific-item">
                                                 <img src="images/room.svg" class="img-fluid" alt="Rooms icon" title="Yacht Rooms" loading="lazy" />
                                                 <span>2 Rooms</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-footer">
-                                    
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 price">
+                                                <h3>AED <strong>6,500</strong></h3>
+                                                <span>Per head</span>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 button-wrap">
+                                                <button class="book-now-btn">Enquire now</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </a>
+                                </div>
                                 
-                                
+                                                          
                                 
                             </div>
                         </div>
@@ -208,6 +217,41 @@
             </div>
         </section>
         <!--//content section-->
+
+        <!--panel for yacht-->
+        <div id="details-panel" class="slide-panel" aria-hidden="true">
+            <div class="slide-panel__overlay"></div>
+            <div class="slide-panel__content">
+                <button class="slide-panel__close" aria-label="Close panel">&times;</button>
+                <div class="swiper yachtswiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-swiper-autoplay="8000">
+                            <img src="images/147-ft-royal-rave.webp" class="img-fluid" alt="Luxury Yacht Rental in Dubai" title="Luxury Yacht Rental in Dubai" loading="lazy" />
+                        </div>
+                        <div class="swiper-slide" data-swiper-autoplay="8000">
+                            <img src="images/147-ft-royal-rave.webp" class="img-fluid" alt="Luxury Yacht Rental in Dubai" title="Luxury Yacht Rental in Dubai" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+                <div class="yacht-details">
+                    <div class="row details-header">
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
+                            <h2 class="slide-panel__title">147 Ft Royal Rave</h2>
+                            <div class="location">
+                                <img src="images/location.svg" class="img-fluid" alt="Location icon" title="Yacht Location" loading="lazy" />
+                                <span>Creek Harbour</span>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 price">
+                            <h3>AED <strong>6,500</strong></h3>
+                            <span>Per head</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="slide-panel__cta">Enquire now</button>
+            </div>
+        </div>
+        <!--//panel for yacht-->
 
 
 
