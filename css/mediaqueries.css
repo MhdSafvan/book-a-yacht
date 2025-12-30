@@ -1,1 +1,86 @@
-/*# sourceMappingURL=mediaqueries.css.map */
+@media screen and (min-width: 315px) and (max-width: 599px) {
+  html body .dropdown.is-open .dropdown-menu {
+    position: relative;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #e3e6e8;
+  }
+  html body .dropdown.is-open .dropdown-menu li a {
+    text-transform: capitalize;
+    padding-left: 50px;
+  }
+  html body header {
+    padding: 15px 0;
+  }
+  html body header .top-header {
+    display: none;
+  }
+  html body header .cta-col {
+    display: none;
+  }
+  html body header .navbar-grid {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+  html body header .primary-menu {
+    top: calc(100% + 0px);
+    width: 90%;
+    margin: 0 auto;
+    gap: 0;
+    padding: 0;
+  }
+  html body header .primary-menu li {
+    margin: 0;
+  }
+  html body header .primary-menu li a {
+    color: #000000 !important;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-bottom: 1px solid #e3e6e8;
+  }
+  html body header .primary-menu li a img {
+    filter: invert(1);
+    opacity: 0.5;
+  }
+  html body section {
+    padding: 50px 10px;
+  }
+  html body section.inner-banner h1 {
+    width: 95%;
+  }
+  html body section .meta-title {
+    text-align: center;
+    font-size: 18px;
+  }
+  html body section .section-title {
+    text-align: center;
+    font-size: 25px;
+  }
+  html body section p {
+    font-size: 18px;
+    line-height: 35px;
+    text-align: justify;
+    -moz-text-align-last: center;
+         text-align-last: center;
+  }
+  html body section .yacht-list-wrapper {
+    margin-top: 30px;
+  }
+  html body section .yacht-list-wrapper .yacht-card {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+  }
+  html body section .yacht-list-wrapper .yacht-card .yacht-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    float: left;
+  }
+  html body section .yacht-list-wrapper .yacht-card .yacht-image .location {
+    display: none;
+  }
+}/*# sourceMappingURL=mediaqueries.css.map */

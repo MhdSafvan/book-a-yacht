@@ -35,6 +35,27 @@ html body .primary-menu {
 html body .primary-menu.is-open {
   display: flex;
 }
+html body .navbar-toggler .hamburger {
+  background: #ffffff;
+}
+html body .navbar-toggler .hamburger::before {
+  background: #ffffff;
+}
+html body .navbar-toggler .hamburger::after {
+  background: #ffffff;
+}
+html body .navbar-toggler.active .hamburger {
+  top: -7px;
+  background: transparent !important;
+}
+html body .navbar-toggler.active .hamburger::after {
+  transform: rotate(45deg);
+  top: 7px;
+}
+html body .navbar-toggler.active .hamburger::before {
+  transform: rotate(-45deg);
+  top: 7px;
+}
 @media (min-width: 1024px) {
   html body .nav-toggle {
     display: none;
@@ -123,6 +144,8 @@ html body .slide-panel {
   inset: 0;
   z-index: 1000;
   pointer-events: none;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 html body .slide-panel__overlay {
   position: absolute;
@@ -134,7 +157,7 @@ html body .slide-panel__overlay {
           backdrop-filter: blur(10px);
 }
 html body .slide-panel__content {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 50vw;
@@ -143,7 +166,7 @@ html body .slide-panel__content {
   background: #fff;
   transform: translateX(100%);
   transition: transform 0.4s ease;
-  overflow-y: auto;
+  overflow: hidden;
 }
 html body .slide-panel__close {
   position: absolute;
@@ -166,11 +189,13 @@ html body .slide-panel__close:hover {
   transform: rotate(90deg);
 }
 html body .slide-panel .swiper {
-  height: 50vh;
+  height: auto;
   overflow: hidden;
 }
 html body .slide-panel .yacht-details {
   padding: 50px 60px;
+  max-height: 64vh;
+  overflow-y: scroll;
 }
 html body .slide-panel .yacht-details .details-header .location {
   position: relative;
@@ -191,6 +216,82 @@ html body .slide-panel .yacht-details .details-header .price span {
   text-align: right;
   display: block;
 }
+html body .slide-panel .yacht-details .details-header .price span {
+  color: #898989;
+}
+html body .slide-panel .yacht-details .details-content .specifications {
+  padding: 20px 0;
+  margin: 30px 0;
+  background: #f3f5f9;
+  display: flex;
+  justify-content: space-between;
+}
+html body .slide-panel .yacht-details .details-content .specifications .specific-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  position: relative;
+  padding: 0 30px;
+}
+html body .slide-panel .yacht-details .details-content .specifications .specific-item img {
+  width: 18px;
+  margin-right: 10px;
+  position: relative;
+  top: -2px;
+}
+html body .slide-panel .yacht-details .details-content .specifications .specific-item span {
+  color: #000000;
+  font-size: 15px;
+}
+html body .slide-panel .yacht-details .details-content .specifications .specific-item:after {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background-color: #ccc;
+  position: absolute;
+  right: 0;
+}
+html body .slide-panel .yacht-details .details-content .specifications .specific-item:last-child:after {
+  display: none;
+}
+html body .slide-panel .yacht-details .details-content .overview {
+  margin: 30px 0;
+}
+html body .slide-panel .yacht-details .details-content .details-title {
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+}
+html body .slide-panel .yacht-details .details-content p {
+  font-size: 15px;
+  line-height: 30px;
+  color: #000000;
+}
+html body .slide-panel .yacht-details .inclusive-additional ul {
+  list-style-type: none;
+  padding: 0;
+}
+html body .slide-panel .yacht-details .inclusive-additional ul li {
+  content: "";
+  background-image: url(../images/check.svg);
+  background-size: 5%;
+  background-repeat: no-repeat;
+  padding: 15px 0 15px 8%;
+  background-position-y: center;
+  border-bottom: 1px solid #e3e6e8;
+}
+html body .slide-panel .yacht-details .inclusive-additional ul li:last-child {
+  border-bottom: none;
+}
+html body .slide-panel .yacht-details .inclusive-additional .additional ul li {
+  background-image: url(../images/addones.svg);
+  background-size: 4.5%;
+}
+html body .slide-panel .yacht-details .inclusive-additional .additional ul li span {
+  float: right;
+}
 html body .slide-panel .slide-panel__cta {
   padding: 20px 30px;
   width: 100%;
@@ -204,6 +305,13 @@ html body .slide-panel .slide-panel__cta {
   font-weight: 500;
   position: fixed;
   bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body .slide-panel .slide-panel__cta img {
+  width: 18px;
+  margin-right: 10px;
 }
 html body .slide-panel.is-open {
   pointer-events: auto;
@@ -276,7 +384,7 @@ html body header .navbar-grid .logo img {
 html body header .navbar-grid nav .primary-menu li a {
   font-size: 16px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   color: #ffffff;
 }
 html body header .navbar-grid nav .primary-menu li.dropdown a img {
@@ -294,6 +402,15 @@ html body header.sticky-header .top-header .container .top-header-container img 
 }
 html body header.sticky-header .navbar-grid .logo img {
   filter: brightness();
+}
+html body header.sticky-header .navbar-grid .navbar-toggler .hamburger {
+  background: #000000;
+}
+html body header.sticky-header .navbar-grid .navbar-toggler .hamburger::before {
+  background: #000000;
+}
+html body header.sticky-header .navbar-grid .navbar-toggler .hamburger::after {
+  background: #000000;
 }
 html body header.sticky-header .navbar-grid nav .primary-menu li a {
   color: #243a47;

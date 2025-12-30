@@ -22,6 +22,7 @@ html {
         color: #ffffff !important;
       }
     }
+
     .bg-color {
       background-color: #f3f5f9;
     }
@@ -34,6 +35,31 @@ html {
 
     .primary-menu.is-open {
       display: flex;
+    }
+    .navbar-toggler {
+      .hamburger{
+        background: #ffffff;
+        &::before {
+          background: #ffffff;
+        }
+        &::after {
+          background: #ffffff;
+        }
+      }
+      &.active {
+        .hamburger {
+          top: -7px;
+          background: transparent !important;
+          &::after {
+            transform: rotate(45deg);
+            top: 7px;
+          }
+          &::before {
+            transform: rotate(-45deg);
+            top: 7px;
+          }
+        }
+      }
     }
 
     /* Desktop */
@@ -146,6 +172,8 @@ html {
       inset: 0;
       z-index: 1000;
       pointer-events: none;
+      overflow: hidden;
+      overflow-y: scroll;
 
       &__overlay {
         position: absolute;
@@ -157,7 +185,7 @@ html {
       }
 
       &__content {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         width: 50vw;
@@ -166,7 +194,7 @@ html {
         background: #fff;
         transform: translateX(100%);
         transition: transform 0.4s ease;
-        overflow-y: auto;
+        overflow: hidden;
       }
 
       &__close {
@@ -191,11 +219,14 @@ html {
       }
 
       .swiper {
-        height: 50vh;
+        height: auto;
         overflow: hidden;
       }
       .yacht-details {
         padding: 50px 60px;
+        max-height: 64vh;
+        overflow-y: scroll;
+
         .details-header {
           .location {
             position: relative;
@@ -217,6 +248,90 @@ html {
               text-align: right;
               display: block;
             }
+            span {
+              color: #898989;
+            }
+          }
+        }
+        .details-content {
+          .specifications {
+            padding: 20px 0;
+            margin: 30px 0;
+            background: #f3f5f9;
+            display: flex;
+            justify-content: space-between;
+            .specific-item {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              line-height: 0;
+              position: relative;
+              padding: 0 30px;
+              img {
+                width: 18px;
+                margin-right: 10px;
+                position: relative;
+                top: -2px;
+              }
+              span {
+                color: #000000;
+                font-size: 15px;
+              }
+              &:after {
+                content: "";
+                width: 1px;
+                height: 15px;
+                background-color: #ccc;
+                position: absolute;
+                right: 0;
+              }
+              &:last-child:after {
+                display: none;
+              }
+            }
+          }
+          .overview {
+            margin: 30px 0;
+          }
+          .details-title {
+            color: #000000;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 600;
+          }
+          p {
+            font-size: 15px;
+            line-height: 30px;
+            color: #000000;
+          }
+        }
+        .inclusive-additional {
+          ul {
+            list-style-type: none;
+            padding: 0;
+            li {
+              content: "";
+              background-image: url(../images/check.svg);
+              background-size: 5%;
+              background-repeat: no-repeat;
+              padding: 15px 0 15px 8%;
+              background-position-y: center;
+              border-bottom: 1px solid #e3e6e8;
+              &:last-child {
+                border-bottom: none;
+              }
+            }
+          }
+          .additional {
+            ul {
+              li {
+                background-image: url(../images/addones.svg);
+                background-size: 4.5%;
+                span {
+                  float: right;
+                }
+              }
+            }
           }
         }
       }
@@ -237,6 +352,13 @@ html {
         font-weight: 500;
         position: fixed;
         bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 18px;
+          margin-right: 10px;
+        }
       }
 
       &.is-open {
@@ -317,7 +439,7 @@ html {
               a {
                 font-size: 16px;
                 text-transform: uppercase;
-                font-weight: 600;
+                font-weight: 500;
                 color: #ffffff;
               }
               &.dropdown {
@@ -350,6 +472,17 @@ html {
           .logo {
             img {
               filter: brightness();
+            }
+          }
+          .navbar-toggler{
+            .hamburger{
+              background: #000000;
+              &::before {
+                background: #000000;
+              }
+              &::after {
+                background: #000000;
+              }
             }
           }
         }
