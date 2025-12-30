@@ -18,8 +18,8 @@ html {
       border-radius: 50px;
       transition: all ease 0.5s;
       &:hover {
-        background-color: #7fbbc5;
-        color: #ffffff;
+        background-color: #7fbbc5 !important;
+        color: #ffffff !important;
       }
     }
     .bg-color {
@@ -139,6 +139,117 @@ html {
       visibility: visible;
       transform: translateY(0);
       pointer-events: auto;
+    }
+
+    .slide-panel {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      pointer-events: none;
+
+      &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      &__content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        max-width: 100%;
+        height: 100%;
+        background: #fff;
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        overflow-y: auto;
+      }
+
+      &__close {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background-color: rgb(0 0 0 / 13%);
+        color: #ffffff;
+        font-size: 28px;
+        cursor: pointer;
+        border: 1px solid rgb(255 255 255 / 11%);
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        -webkit-backdrop-filter: blur(60px);
+        backdrop-filter: blur(60px);
+        transition: transform 0.5s ease;
+        z-index: 9;
+        &:hover {
+          transform: rotate(90deg);
+        }
+      }
+
+      .swiper {
+        height: 50vh;
+        overflow: hidden;
+      }
+      .yacht-details {
+        padding: 50px 60px;
+        .details-header {
+          .location {
+            position: relative;
+            padding: 0;
+            display: flex;
+            img {
+              width: 15px;
+              margin-right: 10px;
+              position: relative;
+            }
+            span {
+              color: #898989;
+              font-size: 18px;
+            }
+          }
+          .price {
+            h3,
+            span {
+              text-align: right;
+              display: block;
+            }
+          }
+        }
+      }
+      .slide-panel__cta {
+        padding: 20px 30px;
+        width: 100%;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #ffffff;
+        background: #243a47;
+        text-align: center;
+        background: linear-gradient(
+          90deg,
+          rgb(36, 58, 71) 0%,
+          rgb(88, 141, 173) 100%
+        );
+        border: none;
+        font-weight: 500;
+        position: fixed;
+        bottom: 0;
+      }
+
+      &.is-open {
+        pointer-events: auto;
+
+        .slide-panel__overlay {
+          opacity: 1;
+        }
+
+        .slide-panel__content {
+          transform: translateX(0);
+        }
+      }
     }
 
     header {
@@ -309,6 +420,7 @@ html {
           border-radius: 15px;
           display: flex;
           flex-direction: column;
+          cursor: pointer;
           .yacht-image {
             height: 225px;
             width: 100%;
@@ -319,6 +431,7 @@ html {
               object-fit: cover;
               width: 100%;
               height: 100%;
+              transition: all ease 0.5s;
             }
             .location {
               position: absolute;
@@ -328,6 +441,7 @@ html {
               display: flex;
               flex-direction: row;
               width: 100%;
+              z-index: 2;
               img {
                 width: 15px;
                 margin-right: 10px;
@@ -360,7 +474,7 @@ html {
               position: absolute;
               bottom: 0;
               left: 0;
-              z-index: 0;
+              z-index: 1;
               height: 100%;
             }
           }
@@ -370,6 +484,80 @@ html {
               font-weight: 600;
               color: #212529;
               margin: 20px 0;
+            }
+            .specifications {
+              .specific-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 0;
+                position: relative;
+                img {
+                  width: 18px;
+                  margin-right: 10px;
+                }
+                span {
+                  color: #000000;
+                  font-size: 13px;
+                }
+                &:after {
+                  content: "";
+                  width: 1px;
+                  height: 15px;
+                  background-color: #ccc;
+                  position: absolute;
+                  right: 0;
+                }
+                &:last-child:after {
+                  display: none;
+                }
+              }
+            }
+          }
+          .card-footer {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e3e6e8;
+            .price {
+              h3 {
+                font-size: 20px;
+                color: #243a47;
+                margin: 0;
+              }
+              span {
+                color: #898989;
+                font-size: 15px;
+              }
+            }
+            .button-wrap {
+              button {
+                padding: 15px 30px;
+                width: 100%;
+                font-size: 13px;
+                text-transform: uppercase;
+                color: #ffffff;
+                background: #243a47;
+                text-align: center;
+                background: linear-gradient(
+                  90deg,
+                  rgba(36, 58, 71, 1) 0%,
+                  rgba(88, 141, 173, 1) 100%
+                );
+                border-radius: 50px;
+                border: none;
+                font-weight: 500;
+                transition: all ease 0.5s;
+                &:hover {
+                  color: #ffffff !important;
+                }
+              }
+            }
+          }
+          &:hover {
+            .yacht-image {
+              img {
+                transform: scale(1.05);
+              }
             }
           }
         }
