@@ -55,9 +55,9 @@
         <link rel="stylesheet" href="css/all.min.css" />
         <link rel="stylesheet" href="css/swiper.min.css" />
         <link rel="stylesheet" href="css/magnific-popup.css" />
+        <link rel="stylesheet" href="css/navbar.css" />
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="css/mediaqueries.css" />
-        <link rel="stylesheet" href="css/navbar.css" />
         <!--// styles -->
 
     </head>
@@ -87,7 +87,7 @@
             <div class="container navbar-grid">
 
                 <div class="nav-col logo-col">
-                    <a href="/" class="logo">
+                    <a href="index.html" class="logo">
                         <img src="images/booak-a-yacht-logo.svg" alt="Book A Yacht - Luxury Yacht Rentals" title="Book A Yacht - Premium Yacht Charter Services" loading="lazy" />
                     </a>
                 </div>
@@ -95,8 +95,6 @@
                 <nav class="nav-col nav-col--menu" aria-label="Main Navigation">
                     <button class="nav-toggle navbar-toggler" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="hamburger" aria-hidden="true">
-                            <span></span>
-                            <span></span>
                             <span></span>
                         </span>
                     </button>
@@ -170,7 +168,7 @@
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
 
-                                <div class="yacht-card js-panel-trigger" data-panel-target="#details-panel" data-title="Luxury Yacht" data-description="Premium yacht with crew and amenities.">
+                                <div class="yacht-card js-panel-trigger" data-panel-target="#details-panel-110-benetti" data-yacht-id="110-ft-benetti" data-title="110 FT Benetti" data-description="Premium yacht with crew and amenities.">
                                     <div class="yacht-image">
                                         <img src="images/147-ft-royal-rave.webp" class="img-fluid" alt="Luxury Yacht Rental in Dubai" title="Luxury Yacht Rental in Dubai" loading="lazy" />
                                         <div class="location">
@@ -179,7 +177,7 @@
                                         </div>
                                     </div>
                                     <div class="yacht-details">
-                                        <h3 class="yacht-name">147 Ft Royal Rave</h3>
+                                        <h3 class="yacht-name">110 FT Benetti</h3>
                                         <div class="row specifications">
                                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 specific-item">
                                                 <img src="images/people.svg" class="img-fluid" alt="Capacity icon" title="Yacht Capacity" loading="lazy" />
@@ -198,8 +196,8 @@
                                     <div class="card-footer">
                                         <div class="row">
                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 price">
-                                                <h3>AED <strong>6,500</strong></h3>
-                                                <span>Per head</span>
+                                                <h3>AED <strong>5,500</strong></h3>
+                                                <span>Per hours</span>
                                             </div>
                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 button-wrap">
                                                 <button class="book-now-btn">Enquire now</button>
@@ -219,7 +217,7 @@
         <!--//content section-->
 
         <!--panel for yacht-->
-        <div id="details-panel" class="slide-panel" aria-hidden="true">
+        <div id="details-panel-110-benetti" class="slide-panel" data-yacht-id="110-ft-benetti" aria-hidden="true">
             <div class="slide-panel__overlay"></div>
             <div class="slide-panel__content">
                 <button class="slide-panel__close" aria-label="Close panel">&times;</button>
@@ -236,19 +234,72 @@
                 <div class="yacht-details">
                     <div class="row details-header">
                         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
-                            <h2 class="slide-panel__title">147 Ft Royal Rave</h2>
+                            <h2 class="slide-panel__title">110 FT Benetti</h2>
                             <div class="location">
                                 <img src="images/location.svg" class="img-fluid" alt="Location icon" title="Yacht Location" loading="lazy" />
                                 <span>Creek Harbour</span>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 price">
-                            <h3>AED <strong>6,500</strong></h3>
-                            <span>Per head</span>
+                            <h3>AED <strong>5,500</strong></h3>
+                            <span>Per hours</span>
+                        </div>
+                    </div>
+                    <div class="details-content">
+                        <ul class="specifications">
+                            <li class="specific-item">
+                                <img src="images/people.svg" class="img-fluid" alt="Capacity icon representing how many people can travel" title="Yacht Capacity" loading="lazy" />
+                                <span>50 Guests</span>
+                            </li>
+                            <li class="specific-item">
+                                <img src="images/crew.svg" class="img-fluid" alt="Crew icon representing available crews in the yacht" title="Yacht Crew" loading="lazy" />
+                                <span>1 Captain, 5 Crews</span>
+                            </li>
+                            <li class="specific-item">
+                                <img src="images/room.svg" class="img-fluid" alt="Rooms icon representing Available Rooms" title="Yacht Rooms" loading="lazy" />
+                                <span>5 Rooms</span>
+                            </li>
+                            <li class="specific-item">
+                                <img src="images/yacht.svg" class="img-fluid" alt="Yacht icon representing Yacht Size in feet" title="Yacht Rooms" loading="lazy" />
+                                <span>110 Ft</span>
+                            </li>
+                            <li class="specific-item">
+                                <img src="images/duration.svg" class="img-fluid" alt="Clock icon representing rental duration or booking time period" title="Yacht Rental Duration" loading="lazy" />
+                                <span>Min. 5 hrs</span>
+                            </li>
+                        </ul>
+                        <div class="overview">
+                            <h4 class="details-title">Overview</h4>
+                            <p>The sea, the sky, and a yacht—pure freedom. The 110ft Benetti Yacht is the pure definition of luxury. This premium yacht is designed for those who want a premium experience on a budget. With its classy design, spacious decks, and top-class interiors, the Benetti Yacht offers an unforgettable journey.</p>
+                        </div>
+                        <div class="row inclusive-additional">
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 inclusive">
+                                <h4 class="details-title">What's Included</h4>
+                                <ul>
+                                    <li>Professional Captain & Crew</li>
+                                    <li>Soft Drinks & Water</li>
+                                    <li>Snacks & Light Refreshments</li>
+                                    <li>Life Jackets & Safety Equipment</li>
+                                    <li>Fuel for agreed duration</li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-12"></div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 additional">
+                                <h4 class="details-title">Extra Services</h4>
+                                <ul>
+                                    <li>Fishing Equipment <span>250 AED for 5 Rods</span></li>
+                                    <li>Jetski <span>600 AED / Hour</span></li>
+                                    <li>BBQ Equipment <span>280 AED / Total</span></li>
+                                    <li>Decorations <span>500 AED / Total</span></li>
+                                    <li>Cake <span>Arranged as per requirement</span></li>
+                                    <li>Photography <span>800 AED / Hour(s)</span></li>
+                                    <li>Food <span>Depend on menu</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <button class="slide-panel__cta">Enquire now</button>
+                <a href="#" class="slide-panel__cta js-whatsapp-link" target="_blank"><img src="images/whatsapp.svg" class="img-fluid" alt="WhatsApp icon"/>Check availability on WhatsApp</a>
             </div>
         </div>
         <!--//panel for yacht-->
