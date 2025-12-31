@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+html {
+  overflow-x: hidden !important;
+}
 html body {
   font-family: "Mona Sans", sans-serif;
+  overflow-x: hidden !important;
   /* Mobile default */
   /* Desktop */
   /* Base blur (very subtle at top) */
@@ -145,7 +149,6 @@ html body .slide-panel {
   z-index: 1000;
   pointer-events: none;
   overflow: hidden;
-  overflow-y: scroll;
 }
 html body .slide-panel__overlay {
   position: absolute;

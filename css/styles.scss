@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 html {
+  overflow-x: hidden !important;
   body {
     font-family: "Mona Sans", sans-serif;
+    overflow-x: hidden !important;
     .container {
       max-width: 1600px;
     }
@@ -37,7 +39,7 @@ html {
       display: flex;
     }
     .navbar-toggler {
-      .hamburger{
+      .hamburger {
         background: #ffffff;
         &::before {
           background: #ffffff;
@@ -173,7 +175,6 @@ html {
       z-index: 1000;
       pointer-events: none;
       overflow: hidden;
-      overflow-y: scroll;
 
       &__overlay {
         position: absolute;
@@ -474,8 +475,8 @@ html {
               filter: brightness();
             }
           }
-          .navbar-toggler{
-            .hamburger{
+          .navbar-toggler {
+            .hamburger {
               background: #000000;
               &::before {
                 background: #000000;

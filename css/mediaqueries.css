@@ -8,6 +8,7 @@
   html body .dropdown.is-open .dropdown-menu li a {
     text-transform: capitalize;
     padding-left: 50px;
+    background-color: #f3f5f9;
   }
   html body header {
     padding: 15px 0;
@@ -70,17 +71,77 @@
     margin-top: 30px;
   }
   html body section .yacht-list-wrapper .yacht-card {
-    padding: 10px;
+    padding: 0px;
     display: inline-block;
     width: 100%;
+    overflow: hidden;
   }
   html body section .yacht-list-wrapper .yacht-card .yacht-image {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 25vh;
     margin-right: 15px;
-    float: left;
+    -o-object-position: center;
+       object-position: center;
   }
-  html body section .yacht-list-wrapper .yacht-card .yacht-image .location {
-    display: none;
+  html body section .yacht-list-wrapper .yacht-card .yacht-details {
+    padding: 20px;
+  }
+  html body section .yacht-list-wrapper .yacht-card .yacht-details .yacht-name {
+    margin-top: 0;
+  }
+  html body section .yacht-list-wrapper .yacht-card .yacht-details .specifications .specific-item {
+    flex-direction: column;
+    gap: 15px;
+  }
+  html body section .yacht-list-wrapper .yacht-card .yacht-details .specifications .specific-item .specific-item img {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+  html body section .yacht-list-wrapper .yacht-card .card-footer {
+    padding: 20px;
+  }
+  html body section .yacht-list-wrapper .yacht-card .card-footer .button-wrap button {
+    padding: 15px 20px;
+  }
+  html body .slide-panel__content {
+    width: 100vw;
+  }
+  html body .slide-panel__close {
+    top: 30px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  html body .slide-panel .yacht-details {
+    padding: 30px 20px;
+  }
+  html body .slide-panel .yacht-details .details-content .specifications {
+    flex-direction: column;
+    padding: 0;
+  }
+  html body .slide-panel .yacht-details .details-content .specifications .specific-item {
+    justify-content: flex-start;
+    padding: 20px;
+  }
+  html body .slide-panel .yacht-details .details-content .specifications .specific-item:after {
+    width: 100%;
+    height: 1px;
+    background-color: #e3e6e8;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  html body .slide-panel .yacht-details .details-header .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #e3e6e8;
+    border-bottom: 1px solid #e3e6e8;
+    padding: 15px 0;
+    margin: 15px 0 0;
+  }
+  html body .slide-panel .yacht-details .details-header .price h3 {
+    text-align: left;
+    margin: 0;
   }
 }/*# sourceMappingURL=mediaqueries.css.map */
